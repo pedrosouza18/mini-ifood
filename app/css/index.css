@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Importando uma fonte */
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url('../fonts/source-sans-pro/SourceSansPro-Regular.otf');
+}
+
+@font-face {
+  font-family: "Source Sans Pro";
+  src: url('../fonts/source-sans-pro/SourceSansPro-Bold.otf');
+  font-weight: bold;
+}
+
+body {
+  font-family: "Source Sans Pro";
+}
+
+.cabecalho {
+  background-color: #ff0000ad;
+  padding: 5px;
+  color: #fff;
+  text-align: center;
+}
+.cabecalho h1::before {
+  content: '>';
+  color: #fff;
+  margin-right: 5px;
+  transition: all .75s ease-in-out;
+}
+.cabecalho h1::after {
+  content: '<';
+  color: #fff;
+  margin-left: 5px;
+  transition: all .75s ease-in-out;
+}
+.cabecalho h1:hover::before {
+  margin-right: 50px;
+}
+.cabecalho h1:hover::after {
+  margin-left: 50px;
+}
+
+.section-form {
+  margin: 25px 25px;
+  box-shadow: 1px 1px 1px 1px #8080804a;
+}
+
+.section-form__cabecalho {
+  background-color: #ff0000ad;
+  color: #fff;
+  text-align: center;
+}
+
+.section-form__titulo {
+  margin: 0;
+  padding: 5px 0;
+}
+
+.section-form__form form{
+  padding: 8px;
+  display: flex;
+}
+.section-form__form form div {
+  padding: 5px;
+}
+label {
+  color: grey;
+  font-weight: bold;
+  font-size: 18px;
+}
+input {
+  height: 28px;
+  width: 100%;
+  border: 2px solid #808080ab;
+  border-radius: 5px;
+  outline: none;
+}
+input:focus {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  border-bottom: 2px solid #f46658;
+}
+
+.section-form__div {
+  padding: 8px;
+  text-align: right;
+}
+.section-form__btn {
+  border: none;
+  background: #f46658;
+  color: #fff;
+  padding: 6px;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 17px;
+  cursor: pointer;
+}
+.section-form__btn:hover {
+  background: orange;
+}
+.section-form__btn::before {
+  content: '\2713';
+  margin-right: 5px;
+}
+
+/* TABELA */
+.section-form__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.section-form__table thead {
+  background: #808080a1;
+}
+.section-form__table thead th {
+  padding: 10px;
+}
+.section-form__table tbody td {
+  text-align: center;
+  padding: 8px;
+}
+.section-form__table tfoot {
+  text-align: right;
+  background: #808080a1;
+}
+.section-form__table tfoot td {
+  padding: 8px;
+}
+
+footer{
+  background: #000;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

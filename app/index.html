@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ifood</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <header class="cabecalho">
+    <h1>MINI IFOOD</h1>
+  </header>
+  <main>
+    <section class="section-form">
+      <header class="section-form__cabecalho">
+        <h2 class="section-form__titulo">Pedidos</h2>
+      </header>
+      <section class="section-form__form">
+        <form>
+          <div>
+            <label for="data">Data do pedido</label>
+            <input type="date" name="data" id="data">
+          </div>
+          <div>
+            <label for="nome">Nome do produto</label>
+            <input type="text" name="nome" id="nome">
+          </div>
+          <div>
+            <label for="preco">Preco</label>
+            <input type="text" name="preco" id="preco">
+          </div>
+
+          <div>
+            <label for="qtd">Quantidade</label>
+            <input type="number" name="qtd" id="qtd">
+          </div>
+        </form>
+        <div class="section-form__div">
+          <button class="section-form__btn" onclick="pedidoController.adicionar(event)" type="submit">Cadastrar</button>
+        </div>
+      </section>
+    </section>
+    <section class="section-form">
+      <header class="section-form__cabecalho">
+        <h2 class="section-form__titulo">Pedidos cadastrados</h2>
+      </header>
+      <div id="listanegociacoes"></div>
+    </section>
+  </main>
+  <footer>
+    &copy; Todos os direito reservados - Pedro Souza
+  </footer>
+  <script src="js/controllers/PedidosController.js"></script>
+  <script src="js/models/Pedido.js"></script>
+  <script src="js/models/ListaPedidos.js"></script>
+  <script src="js/helpers/DateHelper.js"></script>
+  <script src="js/views/View.js"></script>
+  <script src="js/views/PedidosView.js"></script>
+  <script>
+    let pedidoController = new PedidosController();
+  </script>
+</body>
+</html>
