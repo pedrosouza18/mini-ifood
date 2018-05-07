@@ -5,13 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Ifood</title>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="app/css/normalize.css">
+  <link rel="stylesheet" href="app/css/index.css">
 </head>
 <body>
   <header class="cabecalho">
     <h1>MINI IFOOD</h1>
   </header>
+  <div id="toast-message"></div>
   <main>
     <section class="section-form">
       <header class="section-form__cabecalho">
@@ -52,12 +53,14 @@
   <footer>
     &copy; Todos os direito reservados - Pedro Souza
   </footer>
-  <script src="js/controllers/PedidosController.js"></script>
-  <script src="js/models/Pedido.js"></script>
-  <script src="js/models/ListaPedidos.js"></script>
-  <script src="js/helpers/DateHelper.js"></script>
-  <script src="js/views/View.js"></script>
-  <script src="js/views/PedidosView.js"></script>
+  <script src="app/js/controllers/PedidosController.js"></script>
+  <script src="app/js/models/Pedido.js"></script>
+  <script src="app/js/models/ListaPedidos.js"></script>
+  <script src="app/js/models/Mensagem.js"></script>
+  <script src="app/js/helpers/DateHelper.js"></script>
+  <script src="app/js/views/View.js"></script>
+  <script src="app/js/views/PedidosView.js"></script>
+  <script src="app/js/views/MensagemView.js"></script>
   <script>
     let pedidoController = new PedidosController();
   </script>
